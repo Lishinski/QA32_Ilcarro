@@ -30,3 +30,4 @@ public class ApplicationManager {
         return userHelper;
     }
 }
+

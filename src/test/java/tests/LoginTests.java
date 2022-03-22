@@ -10,14 +10,14 @@ public class LoginTests extends TestBase{
     @BeforeMethod
     public void preCondition(){
             if(app.user().isLogOutPresent()){
-            app.user().logOut();
+            app.user().logout();
         }
     }
 
     @Test
     public void loginSuccess(){
         app.user().openLoginForm();
-        app.user().fillLoginForm("testerqa.lesh@gmail.com","qa32#2021");
+        app.user().fillLoginForm("testerqa.lesh@gmail.com","Carro123$");
         app.user().submit();
         app.user().pause(1000);
         Assert.assertEquals(app.user().checkMessage(), "Logged in success");
@@ -27,7 +27,7 @@ public class LoginTests extends TestBase{
     @Test
     public void loginSuccessNew(){
         app.user().openLoginForm();
-        app.user().fillLoginForm("testerqa.lesh@gmail.com","qa32#2021");
+        app.user().fillLoginForm("testerqa.lesh@gmail.com","Carro123$");
         app.user().submit();
         app.user().pause(1000);
         Assert.assertEquals(app.user().checkMessage(), "Logged in success");

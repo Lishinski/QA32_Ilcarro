@@ -27,9 +27,10 @@ public class HelperBase {
     public boolean isElementPresent(By locator){
         return wd.findElements(locator).size()>0;
     }
-    public void pause(int millisec){
+
+    public void pause(int millis){
         try {
-            Thread.sleep(millisec);
+            Thread.sleep(millis);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
